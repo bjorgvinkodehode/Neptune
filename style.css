@@ -1,0 +1,19 @@
+:root {
+    --clr-background: linear-gradient(
+      to right bottom,
+      #212121,
+      #212121,
+      #202121,
+      #1f2120,
+      #20211f
+    );
+}
+
+::before,
+::after{
+  box-sizing: border-box;
+}
+
+body{
+    background: var(--clr-background);
+}
