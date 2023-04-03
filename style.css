@@ -27,8 +27,8 @@ body{
   display: flex;
   justify-content: start;
   align-items: flex-start;
-  background-image:url(img/STScI-01GS800ER576MBJ080MB3D9SKG.png);
-  /* background-size: cover; */
+  background-image:url(img/PIA01492.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   margin-top: -2;
   margin-left:-8px;
@@ -38,7 +38,7 @@ body{
   
 }
 #container5{
-  width: 1920px;
+  max-width:100%;
   height: 700px;
 }
 footer{
