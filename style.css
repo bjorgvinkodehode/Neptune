@@ -1,12 +1,17 @@
 :root {
-    --clr-background: linear-gradient(
-      to right bottom,
-      #212121,
-      #212121,
-      #202121,
-      #1f2120,
-      #20211f
-    );
+    --clr-background: linear-gradient(to right bottom, 
+    #4795bd, 
+    #3893b4, 
+    #2c91aa, 
+    #258e9f, 
+    #248b94, 
+    #1b8590, 
+    #0f7f8c, 
+    #007988, 
+    #006f88, 
+    #006487, 
+    #105982, 
+    #264d7b);
     color: rgb(209, 209, 209);
 }
 
@@ -18,20 +23,43 @@
 body{
     background: var(--clr-background);
 }
+#container5{
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  background-image:url(img/STScI-01GS800ER576MBJ080MB3D9SKG.png);
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  margin-top: -2;
+  margin-left:-8px;
+  margin-right:-8px;
+  
 
+  
+}
+#container5{
+  width: 1920px;
+  height: 700px;
+}
 footer{
   display:flex;
-  justify-content: end;
-  background-image:url(img/footerimg.png),var(--clr-background);
-  background-blend-mode: screen;
-  
+  justify-content: center;
+  background-color:#20211f;
   background-repeat: no-repeat;
   background-position: center;
   padding-right: 10%;
   padding-top: 2%;
   padding-bottom: 2%;
+  margin-top: -2;
+  margin-left:-8px;
+  margin-right:-8px;
+  margin-bottom:-8px;
 
 }
+.imglink{
+  border: 1px black;
+}
+
 a {
   text-decoration: none;
   color: inherit;
