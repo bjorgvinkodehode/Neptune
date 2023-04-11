@@ -1,22 +1,27 @@
 :root {
     --clr-background: linear-gradient(to right bottom,
-    #000000, 
-    #080808, 
-    #0f0f0f, 
-    #151515, 
-    #191919, 
+    #000000,
+    #080808,
+    #0f0f0f,
+    #151515,
+    #191919,
     #1c1c1c,
-    #1f1f20, 
+    #1f1f20,
     #222223,
     #242426,
     #262629,
     #29292d,
     #2b2b30);
     color: rgb(209, 209, 209);
-}
 
-::before,
-::after{
+    --clr-button: #5385e5;
+    --clr-neon: hsl(213, 79%, 53%);
+    --clr-bg: hsl(254, 21%, 16%);
+
+}
+*,
+*::before,
+*::after{
   box-sizing: border-box;
 }
 
@@ -33,9 +38,9 @@ body{
   margin-top: -2;
   margin-left:-8px;
   margin-right:-8px;
-  
 
-  
+
+
 }
 #container5{
   max-width:100%;
@@ -56,7 +61,7 @@ footer{
   margin-bottom:-8px;
 
 }
-.imglink{
+.imglink {
   border: 1px black;
 }
 
@@ -64,19 +69,92 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 ul {
   list-style-type: none;
 }
-li{
+
+li {
   font-size: 18px;
 }
 
 body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+display: grid;
+grid-template-rows: auto 1fr auto;
+min-height: 100vh;
 }
 
 main {
   grid-row: 2 / span 1;
+}
+
+/* button { button alternative?
+  border:0;
+  padding:0.3em 0.3em;
+  background-image: var(--clr-button);
+  background-size: 400%;
+  background-position: left;
+  border-radius: 4px;
+  color: rgb(150, 150, 150);
+  margin:2px;
+  transition: background-position 1s;
+}
+
+button:hover,
+button:focus {
+  background-position: right;
+} */
+
+
+button {
+  background: var(--clr-bg);
+  font-size: 1em;
+  display:inline-block;
+  text-decoration: none;
+  cursor:pointer;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  margin: 4px;
+
+  text-shadow: 
+  0 0 0.125em hsl(0 0% 100% / 0.5), 
+  0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 
+  0  0 0.5em 0 var(--clr-neon);
+
+  position: relative;
+
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em .5em var(--clr-neon);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+
+button:hover,
+button:focus {
+color: var(--clr-bg);
+text-shadow: none;
+}
+
+button:hover::before,
+button:focus::before{
+  opacity: 1;
+}
+button:hover::after,
+button:focus::after {
+  opacity: 1;
 }
