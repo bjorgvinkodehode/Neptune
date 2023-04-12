@@ -49,23 +49,23 @@ body{
   text-align: center;
 }
 .item2 {
+  grid-column-start: 8;
+  grid-column-end: 8;
+  
+}
+.item3 {
   grid-column-start: 9;
   grid-column-end: 9;
   
 }
-.item3 {
+.item4 {
   grid-column-start: 10;
   grid-column-end: 10;
   
 }
-.item4 {
-  grid-column-start: 11;
-  grid-column-end: 11;
-  
-}
 .item5 {
-  grid-column-start: 12;
-  grid-column-end: 12;
+  grid-column-start: 11;
+  grid-column-end: 13;
   
 }
 h1{
@@ -266,25 +266,10 @@ button::after {
 }
 
 
-button:hover,
-button:focus {
-  background-color: var(--clr-neon);
-  color: var(--clr-bg);
-  text-shadow: none;
-}
-
-button:hover::before,
-button:focus::before{
-  opacity: 1;
-}
-button:hover::after,
-button:focus::after {
-  opacity: 1;
-}
 
 .item6:hover{
   -webkit-animation: flickerAnimation .5s;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1.8;
   animation-delay: .5s;
 }
 
@@ -293,8 +278,8 @@ button:focus::after {
   0%   { opacity:.9; }
   20%  { opacity:.1; }
   30%  { opacity:.3; }
-  50% { opacity:.3; }
-  70% { opacity:.5; }
+  50%  { opacity:.3; }
+  70%  { opacity:.5; }
   100% { opacity:.1; }
 }
 
@@ -352,7 +337,7 @@ button:focus::after {
     
     .item8:hover{
       -webkit-animation: flickerAnimation .5s;
-      animation-iteration-count: 1;
+      animation-iteration-count: 1.4;
       animation-delay: .5s;
     }
     
@@ -365,3 +350,21 @@ button:focus::after {
       70% { opacity:.5; }
       100% { opacity:.1; }
     }
+
+    
+
+    button:hover,
+button:focus {
+  background-color: var(--clr-neon);
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+button:hover::before,
+button:focus::before{
+  opacity: 1;
+}
+button:hover::after,
+button:focus::after {
+  opacity: 1;
+}
