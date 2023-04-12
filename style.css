@@ -30,8 +30,8 @@
 
 body{
     background: var(--clr-background);
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 10%;
+    padding-right: 10%;
     
 }
 
@@ -39,7 +39,8 @@ body{
 .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: .4em;
+  gap: .1em;
+  align-items: center;
   
 }
 
@@ -47,25 +48,32 @@ body{
   grid-column-start: 1;
   grid-column-end: 13;
   text-align: center;
+  
 }
 .item2 {
-  grid-column-start: 8;
+  grid-column-start:8;
   grid-column-end: 8;
+  
   
 }
 .item3 {
   grid-column-start: 9;
   grid-column-end: 9;
   
+  
 }
 .item4 {
   grid-column-start: 10;
   grid-column-end: 10;
   
+  
+  
 }
 .item5 {
   grid-column-start: 11;
   grid-column-end: 13;
+  
+  
   
 }
 h1{
