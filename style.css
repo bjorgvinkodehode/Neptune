@@ -308,21 +308,24 @@ button::after {
 }
 
 
-  h1:hover,
-  h1:focus{
+
+  h1{
     -webkit-animation: flickerAnimation .2s infinite;
-    animation-iteration-count: 30;
-    animation-delay: 0s;
+
   }
   
-  
   @keyframes flickerAnimation {
-    0%   { opacity:.5; }
-    20%  { opacity:.2; }
-    30%  { opacity:.1; }
-    50% { opacity:.3; }
+    0%  { opacity:.4; }
+    10% { opacity:1;  }
+    20% { opacity:.2; }
+    30% { opacity:.1; }
+    40% { opacity:.1; }
+    50% { opacity:.1; }
+    60% { opacity:.3; }
     70% { opacity:.1; }
-    100% { opacity:.2; }
+    80% { opacity:.9; }
+    90% { opacity:.4; }
+    100% { opacity:1; }
   }
  
 
@@ -349,19 +352,18 @@ button::after {
       animation-delay: .5s;
     }
     
-    
-    @keyframes flickerAnimation {
-      0%   { opacity:.9; }
-      20%  { opacity:.1; }
-      30%  { opacity:.3; }
-      50% { opacity:.3; }
-      70% { opacity:.4; }
-      100% { opacity:.1; }
+@keyframes flickerAnimation {
+    0%   { opacity:.9; }
+    20%  { opacity:.1; }
+    30%  { opacity:.3; }
+    50% { opacity:.3; }
+    70% { opacity:.4; }
+    100% { opacity:.1; }
     }
 
     
 
-    button:hover,
+button:hover,
 button:focus {
   background-color: var(--clr-neon);
   color: var(--clr-bg);
