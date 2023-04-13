@@ -18,7 +18,7 @@
     --clr-neon: hsl(213, 79%, 53%);
     --clr-bg: hsl(254, 21%, 16%);
     --clr-textshadow: 0 0 0.1em hsl(0 0% 100% / 0.5), 0 0 0.45em currentColor;
-    --clr-boxshadow: inset 0 0 0.5em 0 var(--clr-neon), 
+    --clr-boxshadow: inset 0 0 0.5em 0 var(--clr-neon),
     0  0 0.5em 0 var(--clr-neon);
     font-family: 'Roboto', sans-serif;
 }
@@ -32,50 +32,41 @@ body{
     background: var(--clr-background);
     padding-left: 10%;
     padding-right: 10%;
-    
+
 }
 
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(20, 1fr);
   gap: .1em;
   align-items: center;
-  
+
 }
 
 .item1 {
   grid-column-start: 1;
-  grid-column-end: 13;
+  grid-column-end: 20;
   text-align: center;
-  
+
 }
 .item2 {
-  grid-column-start:8;
-  grid-column-end: 8;
-  
-  
+  grid-column-start:1;
+  grid-column-end: 1;
+
+
 }
 .item3 {
-  grid-column-start: 9;
-  grid-column-end: 9;
-  
-  
+  grid-column-start: 2;
+  grid-column-end: 2;
+
+
 }
 .item4 {
-  grid-column-start: 10;
-  grid-column-end: 10;
-  
-  
-  
+  grid-column-start:3;
+  grid-column-end: 3;
 }
-.item5 {
-  grid-column-start: 11;
-  grid-column-end: 13;
-  
-  
-  
-}
+
 h1{
   font-size: 4em;
   font-weight: 700;
@@ -98,7 +89,7 @@ p{
   border-radius: 0.25em;
   box-shadow: var(--clr-boxshadow);
   padding: 10px;
-  
+
 }
 
 /* .devider{
@@ -116,7 +107,7 @@ font-size: 1.2em;
   height: 200px;
 } */
 
-.section1 {
+#section1 {
   text-decoration: none;
   color: var(--clr-neon);
   border: var(--clr-neon) 0.125em solid;
@@ -129,19 +120,20 @@ font-size: 1.2em;
   background-position: center;
   background-size: cover;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   gap: 1em 1em 1em;
 }
 
 .item6{
   grid-column-start: 1;
-  grid-column-end:5;
+  grid-column-end: 5;
 }
 
 .item7{
   grid-column-start: 6;
   grid-column-end: 10;
-  position: fixed;
+  width: fit-content;
+
 }
 
 
@@ -150,20 +142,20 @@ font-size: 1.2em;
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 2;
-  
+
 }
 
-.item9{
+/* .item9{
   grid-column-start: 11;
   grid-column-end: 12;
   grid-row-start: 1;
   grid-row-end: 2;
-}
+} */
 
 footer{
   display:flex;
   justify-content: center;
- 
+
   padding-right: 10%;
   padding-top: 2%;
   padding-bottom: 2%;
@@ -173,7 +165,7 @@ footer{
   margin-bottom:-2px;
 
 }
-.section2{
+#section2{
   text-decoration: none;
   color: var(--clr-neon);
   border: var(--clr-neon) 0.125em solid;
@@ -186,11 +178,11 @@ footer{
   background-position: center;
   background-size: cover;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   gap: 1em 1em 1em;
   margin-top: .5em;
 }
-.section3{
+#section3{
   text-decoration: none;
   color: var(--clr-neon);
   border: var(--clr-neon) 0.125em solid;
@@ -203,7 +195,7 @@ footer{
   background-position: center;
   background-size: cover;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   gap: 1em 1em 1em;
   margin-top: .5em;
 }
@@ -219,10 +211,6 @@ ul {
 
 li {
   font-size: 18px;
-}
-
-main {
-  grid-row: 5 / span 1;
 }
 
 /* button { button alternative?
@@ -278,45 +266,93 @@ button::after {
 
 
 
-/* .item6:hover{
-  -webkit-animation: flickerAnimation .2s;
+body:hover{
+  -webkit-animation: flickerAnimation .5s;
   animation-iteration-count: 3;
-  animation-delay: .2s;
+  animation-delay: 5s;
 }
 
-
 @keyframes flickerAnimation {
-  0%   { opacity:.9; }
-  20%  { opacity:.1; }
-  30%  { opacity:.3; }
-  50%  { opacity:.3; }
-  70%  { opacity:.5; }
-  100% { opacity:.1; }
-} */
-
-/* .item6:focus{
-  -webkit-animation: flickerAnimation .1s infinite;
-  animation-iteration-count: 3;
-  animation-delay: 9s;
-}
-
-
-@keyframes flickerAnimation {
-  0%   { opacity:.5; }
-  20%  { opacity:.2; }
-  30%  { opacity:.1; }
-  50% { opacity:.3; }
+  0%  { opacity:.4; }
+  10% { opacity:1;  }
+  20% { opacity:.2; }
+  30% { opacity:.1; }
+  40% { opacity:.1; }
+  50% { opacity:.1; }
+  60% { opacity:.3; }
   70% { opacity:.1; }
-  100% { opacity:.4; }
-} */
+  80% { opacity:.9; }
+  90% { opacity:.4; }
+  100% { opacity:1; }
+} 
+
+#section1:hover{
+  -webkit-animation: flickerAnimation .5s;
+  animation-iteration-count: 3;
+  animation-delay: 7s;
+}
+
+@keyframes flickerAnimation {
+  0%  { opacity:.4; }
+  10% { opacity:1;  }
+  20% { opacity:.2; }
+  30% { opacity:.1; }
+  40% { opacity:.1; }
+  50% { opacity:.1; }
+  60% { opacity:.3; }
+  70% { opacity:.1; }
+  80% { opacity:.9; }
+  90% { opacity:.4; }
+  100% { opacity:1; }
+} 
 
 
+#section2:hover{
+  -webkit-animation: flickerAnimation .5s;
+  animation-iteration-count: 3;
+  animation-delay: 2s;
+}
+
+@keyframes flickerAnimation {
+  0%  { opacity:.4; }
+  10% { opacity:1;  }
+  20% { opacity:.2; }
+  30% { opacity:.1; }
+  40% { opacity:.1; }
+  50% { opacity:.1; }
+  60% { opacity:.3; }
+  70% { opacity:.1; }
+  80% { opacity:.9; }
+  90% { opacity:.4; }
+  100% { opacity:1; }
+}
+
+#section3:hover{
+  -webkit-animation: flickerAnimation .5s;
+  animation-iteration-count: 3;
+  animation-delay: 1s;
+}
+
+@keyframes flickerAnimation {
+  0%  { opacity:.4; }
+  10% { opacity:1;  }
+  20% { opacity:.2; }
+  30% { opacity:.1; }
+  40% { opacity:.1; }
+  50% { opacity:.1; }
+  60% { opacity:.3; }
+  70% { opacity:.1; }
+  80% { opacity:.9; }
+  90% { opacity:.4; }
+  100% { opacity:1; }
+}
 
   h1{
     -webkit-animation: flickerAnimation .2s infinite;
+    /* animation-iteration-count: 5; */
 
   }
-  
+
   @keyframes flickerAnimation {
     0%  { opacity:.4; }
     10% { opacity:1;  }
@@ -330,46 +366,7 @@ button::after {
     90% { opacity:.4; }
     100% { opacity:1; }
   }
- 
 
-    button:hover,
-    button:focus{
-      -webkit-animation: flickerAnimation .1s;
-      animation-iteration-count: 5;
-      animation-delay: .2s;
-    }
-    
-    
-    @keyframes flickerAnimation {
-      0%  { opacity:.4; }
-    10% { opacity:1;  }
-    20% { opacity:.2; }
-    30% { opacity:.1; }
-    40% { opacity:.1; }
-    50% { opacity:.1; }
-    60% { opacity:.3; }
-    70% { opacity:.1; }
-    80% { opacity:.9; }
-    90% { opacity:.4; }
-    100% { opacity:1; }
-    }
-    
-    .item8:hover{
-      -webkit-animation: flickerAnimation .2s;
-      animation-iteration-count: 2;
-      animation-delay: .5s;
-    }
-    
-@keyframes flickerAnimation {
-    0%   { opacity:.9; }
-    20%  { opacity:.1; }
-    30%  { opacity:.3; }
-    50% { opacity:.3; }
-    70% { opacity:.4; }
-    100% { opacity:.1; }
-    }
-
-    
 
 button:hover,
 button:focus {
@@ -385,28 +382,5 @@ button:focus::before{
 button:hover::after,
 button:focus::after {
   opacity: 1;
-}
-
-.item7 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 10s steps(20, end),
-    blink-caret .75s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
 }
 
