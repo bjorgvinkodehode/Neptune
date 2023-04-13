@@ -129,28 +129,13 @@ font-size: 1.2em;
   grid-column-end: 5;
 }
 
-.item7{
-  grid-column-start: 6;
-  grid-column-end: 10;
-  width: fit-content;
-
-}
-
-
 .item8{
   grid-column-start: 1;
   grid-column-end: 5;
-  grid-row-start: 2;
+  grid-row-start: 1;
   grid-row-end: 2;
 
 }
-
-/* .item9{
-  grid-column-start: 11;
-  grid-column-end: 12;
-  grid-row-start: 1;
-  grid-row-end: 2;
-} */
 
 footer{
   display:flex;
@@ -165,6 +150,7 @@ footer{
   margin-bottom:-2px;
 
 }
+
 #section2{
   text-decoration: none;
   color: var(--clr-neon);
